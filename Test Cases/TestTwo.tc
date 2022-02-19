@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Not taking value from global variable, getting value dynamically</description>
+   <name>TestTwo</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c094c8bb-4071-45ba-be5b-576e85a78ddb</testCaseGuid>
+</TestCaseEntity>

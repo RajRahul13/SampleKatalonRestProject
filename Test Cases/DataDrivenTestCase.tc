@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DataDrivenTestCase</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ed8e022d-1209-4e53-be07-9b7ce2126350</testCaseGuid>
+   <variable>
+      <defaultValue>'rahul'</defaultValue>
+      <description></description>
+      <id>7059fe8b-f822-4fa9-ab1c-0edb823a1e92</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+</TestCaseEntity>

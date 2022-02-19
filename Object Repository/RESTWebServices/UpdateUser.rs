@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ListUsers</name>
+   <name>UpdateUser</name>
    <tag></tag>
-   <elementGuidId>21a96afb-5cbb-458e-b7c7-2d2fda122a34</elementGuidId>
+   <elementGuidId>2162a928-5321-4366-af71-5fe3e2524455</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n    \&quot;name\&quot;: \&quot;${username}\&quot;,\n    \&quot;job\&quot;: \&quot;zion resident\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+      <value>application/json</value>
+   </httpHeaderProperties>
    <katalonVersion>8.2.5</katalonVersion>
    <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://${endpoint}/api/users?page=2</restUrl>
+   <restRequestMethod>PUT</restRequestMethod>
+   <restUrl>https://reqres.in/api/users/2</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -25,11 +36,11 @@
    <socketTimeout>0</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>GlobalVariable.endpoint</defaultValue>
+      <defaultValue>GlobalVariable.username</defaultValue>
       <description></description>
-      <id>d75cf5b4-eda1-42fc-a9db-e311c4c72b10</id>
+      <id>0d11a513-92c2-4cd9-8c57-6724a4f05192</id>
       <masked>false</masked>
-      <name>endpoint</name>
+      <name>username</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -45,10 +56,6 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-
-WS.verifyResponseStatusCode(response, 200)
-
-assertThat(response.getStatusCode()).isEqualTo(200)
-WS.verifyElementPropertyValue(response, 'data[2].first_name', &quot;Tobias&quot;)</verificationScript>
+WS.verifyElementPropertyValue(response, 'name', &quot;Tobias&quot;)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
